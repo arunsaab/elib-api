@@ -1,1 +1,11 @@
-console.log("welcome to my api");
+import app from "./src/app";
+
+const startServer = () => {
+  const port = process.env.PORT || 3000;
+
+  app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+  });
+};
+
+startServer();
