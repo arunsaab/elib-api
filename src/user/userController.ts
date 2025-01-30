@@ -50,7 +50,7 @@ const createUser = async (req: Request, res: Response, next: NextFunction) => {
       algorithm: "HS256"
     });
 
-    res.json({
+    res.status(201).json({
       accessToken: token
     });
   } catch (error) {
